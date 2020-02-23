@@ -23,6 +23,7 @@ class MainScreenGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView(
+      physics: const ClampingScrollPhysics(),
       padding: EdgeInsets.symmetric(vertical: (DeviceInfo.height(context) / 4), horizontal: 32),
       children: <Widget>[
         ActionItem(SDURStrings.ACTION_ITEM_EVENTS, SDURColors.EVENT_BG, EventScreen.routeName),
