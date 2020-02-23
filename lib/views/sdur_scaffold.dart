@@ -4,9 +4,9 @@ import 'package:sdur_app/util/sdur_colors.dart';
 class SDURScaffold extends StatelessWidget {
   final String appBarTitle;
   final Widget body;
-  final bool canPop;
+  final bool isMainScreen;
 
-  const SDURScaffold({this.appBarTitle, this.body, this.canPop = true});
+  const SDURScaffold({this.appBarTitle, this.body, this.isMainScreen = false});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class SDURScaffold extends StatelessWidget {
         iconTheme: IconThemeData(color: SDURColors.BLACK),
         backgroundColor: SDURColors.PRIMARY,
         textTheme: Theme.of(context).textTheme,
-        leading: canPop ? null : const Icon(Icons.menu, color: SDURColors.BLACK),
+        leading: isMainScreen ? const Icon(Icons.menu, color: SDURColors.BLACK) : null,
         title: Row(
           children: <Widget>[
             Expanded(child: Text(appBarTitle, overflow: TextOverflow.fade)),

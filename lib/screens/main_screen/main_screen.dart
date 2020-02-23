@@ -12,7 +12,7 @@ class MainScreen extends StatelessWidget {
     return SDURScaffold(
       appBarTitle: SDURStrings.APP_NAME,
       body: MainScreenGridView(),
-      canPop: false,
+      isMainScreen: true,
     );
   }
 }
