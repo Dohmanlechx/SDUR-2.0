@@ -4,9 +4,9 @@ import 'sdur_colors.dart';
 
 class SDURScaffold extends StatelessWidget {
   final String appBarTitle;
-  final Widget child;
+  final Widget body;
 
-  const SDURScaffold({this.appBarTitle, this.child});
+  const SDURScaffold({this.appBarTitle, this.body});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class SDURScaffold extends StatelessWidget {
           ],
         ),
       ),
-      body: child,
+      body: body,
     );
   }
 }

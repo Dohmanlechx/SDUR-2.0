@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sdur_app/util/sdur_colors.dart';
 
 import 'screens/main/main_screen.dart';
 
@@ -31,6 +32,12 @@ class SDURApp extends StatelessWidget {
                 fontFamily: "Helvetica",
                 fontSize: 18,
                 fontWeight: FontWeight.normal,
+              ),
+              body2: TextStyle(
+                fontFamily: "Helvetica",
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: SDURColors.white,
               ),
             ),
       );
