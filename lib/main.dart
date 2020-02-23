@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
+import 'screens/main/main_screen.dart';
+
 void main() => runApp(SDURApp());
 
 class SDURApp extends StatelessWidget {
+  static const routeName = "/";
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -10,14 +14,14 @@ class SDURApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SDURHomePage(),
+      home: MainScreen(),
+      initialRoute: SDURApp.routeName,
+      onGenerateRoute: (RouteSettings settings) {
+        return null;
+      },
+      onUnknownRoute: (RouteSettings settings) {
+        return MaterialPageRoute(builder: (_) => MainScreen());
+      },
     );
-  }
-}
-
-class SDURHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Text("Test SDUR");
   }
 }
