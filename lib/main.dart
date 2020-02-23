@@ -11,9 +11,7 @@ class SDURApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'SDUR',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: _themeData(),
       home: MainScreen(),
       initialRoute: SDURApp.routeName,
       onGenerateRoute: (RouteSettings settings) {
@@ -24,4 +22,16 @@ class SDURApp extends StatelessWidget {
       },
     );
   }
+
+  _themeData() => ThemeData(
+        primarySwatch: Colors.blue,
+        fontFamily: "Helvetica",
+        textTheme: ThemeData.light().textTheme.copyWith(
+              title: TextStyle(
+                fontFamily: "Helvetica",
+                fontSize: 18,
+                fontWeight: FontWeight.normal,
+              ),
+            ),
+      );
 }
