@@ -6,7 +6,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.settings, color: SDURColors.black),
+        leading: const Icon(Icons.menu, color: SDURColors.black),
         title: Text("Stockholms Dövas Ungdomsråd", style: Theme.of(context).textTheme.title),
         backgroundColor: SDURColors.primary,
       ),
