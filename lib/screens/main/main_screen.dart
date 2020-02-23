@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:sdur_app/util/sdur_colors.dart';
+import 'package:sdur_app/util/sdur_scaffold.dart';
 
 class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: const Icon(Icons.menu, color: SDURColors.black),
-        title: Text("Stockholms Dövas Ungdomsråd", style: Theme.of(context).textTheme.title),
-        backgroundColor: SDURColors.primary,
-      ),
+    return SDURScaffold(
+      appBarTitle: "Stockholms Dövas Ungdomsråd",
+      child: MainScreenGridView(),
     );
   }
 }
