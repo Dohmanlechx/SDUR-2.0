@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sdur_app/util/device_info.dart';
+import 'package:sdur_app/screens/main_screen/widgets/action_item/hollowed_circle.dart';
 import 'package:sdur_app/util/sdur_colors.dart';
 
 class ActionItem extends StatelessWidget {
@@ -37,7 +37,7 @@ class ActionContainer extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Spacer(),
-            _hollowedCircle(DeviceInfo.isSmallDevice(context)),
+            HollowedCircle(color),
             const SizedBox(height: 16),
             Text(title, style: Theme.of(context).textTheme.body2),
             Spacer(),
@@ -57,24 +57,4 @@ class ActionContainer extends StatelessWidget {
       ),
     );
   }
-
-  _hollowedCircle(bool isSmallDevice) => Stack(
-        children: <Widget>[
-          Center(
-            child: Container(
-              width: isSmallDevice ? 20 : 40,
-              height: isSmallDevice ? 20 : 40,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(100), color: SDURColors.WHITE),
-            ),
-          ),
-          Center(
-            child: Container(
-              margin: EdgeInsets.only(top: isSmallDevice ? 1.5 : 3),
-              width: isSmallDevice ? 17 : 34,
-              height: isSmallDevice ? 17 : 34,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(100), color: color),
-            ),
-          )
-        ],
-      );
 }

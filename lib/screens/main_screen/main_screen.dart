@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sdur_app/screens/event_screen/event_screen.dart';
-import 'package:sdur_app/screens/main_screen/widgets/action_item.dart';
+import 'package:sdur_app/screens/main_screen/widgets/action_item/action_item.dart';
 import 'package:sdur_app/util/device_info.dart';
 import 'package:sdur_app/util/sdur_colors.dart';
 import 'package:sdur_app/util/sdur_strings.dart';
