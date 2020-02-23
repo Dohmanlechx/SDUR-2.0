@@ -1,6 +1,6 @@
 import 'dart:ui' show Color;
 
-class SDURColors {
+class SdurColors {
   static const BLACK = const Color(0xFF000000);
   static const WHITE = const Color(0xFFffffff);
 

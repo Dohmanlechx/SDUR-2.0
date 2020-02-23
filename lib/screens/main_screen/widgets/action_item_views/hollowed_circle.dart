@@ -17,7 +17,7 @@ class HollowedCircle extends StatelessWidget {
           child: Container(
             width: isSmallDevice ? 20 : 40,
             height: isSmallDevice ? 20 : 40,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(100), color: SDURColors.WHITE),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(100), color: SdurColors.WHITE),
           ),
         ),
         Center(

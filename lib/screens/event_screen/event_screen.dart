@@ -13,7 +13,7 @@ class _EventScreenState extends State<EventScreen> {
   @override
   Widget build(BuildContext context) {
     return SDURScaffold(
-      appBarTitle: SDURStrings.ACTION_ITEM_EVENTS,
+      appBarTitle: SdurStrings.ACTION_ITEM_EVENTS,
       body: Center(child: Text("EventScreen")),
     );
   }
