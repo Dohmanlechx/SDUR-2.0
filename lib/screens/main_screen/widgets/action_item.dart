@@ -6,20 +6,21 @@ import 'package:sdur_app/util/sdur_colors.dart';
 class ActionItem extends StatelessWidget {
   final String title;
   final Color color;
+  final String navigateTo;
 
-  const ActionItem(this.title, this.color);
+  const ActionItem(this.title, this.color, this.navigateTo);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () => _selectAction(context),
-      splashColor: SDURColors.black,
+      splashColor: SDURColors.BLACK,
       borderRadius: BorderRadius.circular(4),
       child: ActionContainer(title, color),
     );
   }
 
-  void _selectAction(BuildContext ctx) {}
+  void _selectAction(BuildContext ctx) => Navigator.of(ctx).pushNamed(navigateTo);
 }
 
 class ActionContainer extends StatelessWidget {
@@ -63,7 +64,7 @@ class ActionContainer extends StatelessWidget {
             child: Container(
               width: isSmallDevice ? 20 : 40,
               height: isSmallDevice ? 20 : 40,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(100), color: SDURColors.white),
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(100), color: SDURColors.WHITE),
             ),
           ),
           Center(

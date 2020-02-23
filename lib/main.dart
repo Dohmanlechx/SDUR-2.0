@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sdur_app/screens/event_screen/event_screen.dart';
 import 'package:sdur_app/util/sdur_colors.dart';
+import 'package:sdur_app/util/sdur_strings.dart';
 
 import 'screens/main_screen/main_screen.dart';
 
@@ -11,16 +14,23 @@ class SDURApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'SDUR',
+      title: SDURStrings.APP_NAME,
       theme: _themeData(),
       home: MainScreen(),
       initialRoute: SDURApp.routeName,
       onGenerateRoute: (RouteSettings settings) {
-        return null;
+        switch (settings.name) {
+          case EventScreen.routeName:
+            return CupertinoPageRoute(builder: (_) => EventScreen(), settings: settings);
+
+          default:
+            return null;
+        }
       },
-      onUnknownRoute: (RouteSettings settings) {
-        return MaterialPageRoute(builder: (_) => MainScreen());
-      },
+      // TODO: Should we really use this?
+//      onUnknownRoute: (RouteSettings settings) {
+//        return MaterialPageRoute(builder: (_) => MainScreen());
+//      },
     );
   }
 
@@ -37,7 +47,7 @@ class SDURApp extends StatelessWidget {
                 fontFamily: "Helvetica",
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
-                color: SDURColors.white,
+                color: SDURColors.WHITE,
               ),
             ),
       );

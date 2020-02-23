@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:sdur_app/screens/event_screen/event_screen.dart';
 import 'package:sdur_app/screens/main_screen/widgets/action_item.dart';
 import 'package:sdur_app/util/device_info.dart';
 import 'package:sdur_app/util/sdur_colors.dart';
+import 'package:sdur_app/util/sdur_strings.dart';
 import 'package:sdur_app/views/sdur_scaffold.dart';
 
 class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SDURScaffold(
-      appBarTitle: "Stockholms Dövas Ungdomsråd",
+      appBarTitle: SDURStrings.APP_NAME,
       body: MainScreenGridView(),
+      canPop: false,
     );
   }
 }
@@ -22,10 +25,10 @@ class MainScreenGridView extends StatelessWidget {
     return GridView(
       padding: EdgeInsets.symmetric(vertical: (DeviceInfo.height(context) / 4), horizontal: 32),
       children: <Widget>[
-        ActionItem("Evenemang", SDURColors.eventBg),
-        ActionItem("Bli medlem", SDURColors.memberBg),
-        ActionItem("Min profil", SDURColors.profileBg),
-        ActionItem("Kontakt", SDURColors.contactBg),
+        ActionItem(SDURStrings.ACTION_ITEM_EVENTS, SDURColors.EVENT_BG, EventScreen.routeName),
+        ActionItem(SDURStrings.ACTION_ITEM_MEMBER, SDURColors.MEMBER_BG, ""),
+        ActionItem(SDURStrings.ACTION_ITEM_PROFILE, SDURColors.PROFILE_BG, ""),
+        ActionItem(SDURStrings.ACTION_ITEM_CONTACT, SDURColors.CONTACT_BG, ""),
       ],
       gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
         maxCrossAxisExtent: 200,
