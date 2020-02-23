@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'sdur_colors.dart';
+import 'package:sdur_app/util/sdur_colors.dart';
 
 class SDURScaffold extends StatelessWidget {
   final String appBarTitle;

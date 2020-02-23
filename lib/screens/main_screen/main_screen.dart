@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sdur_app/screens/main/widgets/action_item.dart';
+import 'package:sdur_app/screens/main_screen/widgets/action_item.dart';
 import 'package:sdur_app/util/device_info.dart';
 import 'package:sdur_app/util/sdur_colors.dart';
-import 'package:sdur_app/util/sdur_scaffold.dart';
+import 'package:sdur_app/views/sdur_scaffold.dart';
 
 class MainScreen extends StatelessWidget {
   @override

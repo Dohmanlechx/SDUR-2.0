@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sdur_app/util/sdur_colors.dart';
 
-import 'screens/main/main_screen.dart';
+import 'screens/main_screen/main_screen.dart';
 
 void main() => runApp(SDURApp());
 
