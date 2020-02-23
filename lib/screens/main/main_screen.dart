@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sdur_app/screens/main/widgets/action_item.dart';
+import 'package:sdur_app/util/device_info.dart';
 import 'package:sdur_app/util/sdur_colors.dart';
 import 'package:sdur_app/util/sdur_scaffold.dart';
 
@@ -19,7 +20,7 @@ class MainScreenGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView(
-      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 32),
+      padding: EdgeInsets.symmetric(vertical: (DeviceInfo.height(context) / 4), horizontal: 32),
       children: <Widget>[
         ActionItem("Evenemang", SDURColors.eventBg),
         ActionItem("Bli medlem", SDURColors.memberBg),
