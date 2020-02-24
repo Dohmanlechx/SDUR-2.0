@@ -20,12 +20,14 @@ extension ParseTargetGroupToString on TargetGroup {
 }
 
 class Event {
-  final String name;
+  final String title;
+  final String description;
   final DateTime dateTime;
   final TargetGroup targetGroup;
 
   const Event({
-    @required this.name,
+    @required this.title,
+    this.description,
     @required this.dateTime,
     @required this.targetGroup,
   });

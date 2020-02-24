@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sdur_app/screens/event_details_screen/event_details_screen.dart';
 import 'package:sdur_app/screens/event_screen/event_screen.dart';
 import 'package:sdur_app/screens/main_screen/main_screen.dart';
 import 'package:sdur_app/util/sdur_util/sdur_strings.dart';
@@ -21,6 +22,8 @@ class SDURApp extends StatelessWidget {
         switch (settings.name) {
           case EventScreen.routeName:
             return CupertinoPageRoute(builder: (_) => EventScreen(), settings: settings);
+          case EventDetailsScreen.routeName:
+            return MaterialPageRoute(builder: (_) => EventDetailsScreen(), settings: settings);
 
           default:
             return null;

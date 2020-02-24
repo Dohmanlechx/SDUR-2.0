@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sdur_app/models/event.dart';
+import 'package:sdur_app/screens/event_details_screen/event_details_screen.dart';
 import 'package:sdur_app/screens/event_screen/widgets/event_item_views/event_item_info_column.dart';
 import 'package:sdur_app/util/sdur_util/sdur_colors.dart';
 
@@ -9,15 +10,20 @@ class EventItem extends StatelessWidget {
 
   const EventItem(this.event);
 
+  void _selectEvent(BuildContext ctx) => Navigator.of(ctx).pushNamed(EventDetailsScreen.routeName, arguments: event);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      color: SdurColors.ACCENT,
-      child: EventItemInfoColumn(
-        dateTime: event.dateTime,
-        name: event.name,
-        targetGroup: event.targetGroup,
+    return GestureDetector(
+      onTap: () => _selectEvent(context),
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        color: SdurColors.ACCENT,
+        child: EventItemInfoColumn(
+          dateTime: event.dateTime,
+          name: event.title,
+          targetGroup: event.targetGroup,
+        ),
       ),
     );
   }
