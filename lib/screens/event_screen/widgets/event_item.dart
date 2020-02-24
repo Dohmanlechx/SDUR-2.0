@@ -16,13 +16,16 @@ class EventItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => _selectEvent(context),
-      child: Container(
-        padding: const EdgeInsets.all(16),
-        color: SdurColors.ACCENT,
-        child: EventItemInfoColumn(
-          dateTime: event.dateTime,
-          name: event.title,
-          targetGroup: event.targetGroup,
+      child: Hero(
+        tag: "eventItem${event.dateTime}",
+        child: Container(
+          padding: const EdgeInsets.all(16),
+          color: SdurColors.ACCENT,
+          child: EventItemInfoColumn(
+            dateTime: event.dateTime,
+            name: event.title,
+            targetGroup: event.targetGroup,
+          ),
         ),
       ),
     );

@@ -11,6 +11,12 @@ class SdurTheme {
                 fontSize: 18,
                 fontWeight: FontWeight.normal,
               ),
+              body1: TextStyle(
+                fontFamily: "Helvetica",
+                fontSize: 16,
+                fontWeight: FontWeight.normal,
+                color: SdurColors.BLACK,
+              ),
               body2: TextStyle(
                 fontFamily: "Helvetica",
                 fontSize: 16,

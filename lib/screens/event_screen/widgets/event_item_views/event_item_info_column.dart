@@ -18,9 +18,10 @@ class EventItemInfoColumn extends StatelessWidget {
     return Column(
       children: <Widget>[
         Container(
-          //decoration: BoxDecoration(border: Border.all(color: Colors.black26)),
-          //alignment: Alignment.center,
-          child: Text(targetGroup.toText(), style: Theme.of(ctx).textTheme.title.copyWith(fontSize: 22)),
+          child: Text(
+            targetGroup.toText(),
+            style: Theme.of(ctx).textTheme.title.copyWith(fontSize: 22),
+          ),
         ),
         Divider(),
       ],
@@ -46,11 +47,13 @@ class EventItemInfoColumn extends StatelessWidget {
   }
 
   Widget _name(BuildContext ctx) {
-    return AutoSizeText(
-      name,
-      style: Theme.of(ctx).textTheme.title,
-      maxLines: 2,
-      overflow: TextOverflow.ellipsis,
+    return Expanded(
+      child: AutoSizeText(
+        name,
+        style: Theme.of(ctx).textTheme.title,
+        maxLines: 2,
+        overflow: TextOverflow.ellipsis,
+      ),
     );
   }
 
@@ -63,7 +66,6 @@ class EventItemInfoColumn extends StatelessWidget {
           _targetGroup(context),
           _dateAndMonth(context),
           _name(context),
-          const Spacer(),
         ],
       ),
     );

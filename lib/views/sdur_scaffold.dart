@@ -11,18 +11,20 @@ class SDURScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: true,
-        iconTheme: IconThemeData(color: SdurColors.BLACK),
-        backgroundColor: SdurColors.PRIMARY,
-        textTheme: Theme.of(context).textTheme,
-        leading: isMainScreen ? const Icon(Icons.menu, color: SdurColors.BLACK) : null,
-        title: Row(
-          children: <Widget>[
-            Expanded(child: Text(appBarTitle, overflow: TextOverflow.fade)),
-          ],
-        ),
-      ),
+      appBar: appBarTitle != null
+          ? AppBar(
+              automaticallyImplyLeading: true,
+              iconTheme: IconThemeData(color: SdurColors.BLACK),
+              backgroundColor: SdurColors.PRIMARY,
+              textTheme: Theme.of(context).textTheme,
+              leading: isMainScreen ? const Icon(Icons.menu, color: SdurColors.BLACK) : null,
+              title: Row(
+                children: <Widget>[
+                  Expanded(child: Text(appBarTitle, overflow: TextOverflow.fade)),
+                ],
+              ),
+            )
+          : null,
       body: body,
     );
   }
