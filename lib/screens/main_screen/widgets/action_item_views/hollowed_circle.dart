@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sdur_app/util/device_info.dart';
-import 'package:sdur_app/util/sdur_colors.dart';
+import 'package:sdur_app/util/sdur_util/sdur_colors.dart';
 
 class HollowedCircle extends StatelessWidget {
   final Color color;

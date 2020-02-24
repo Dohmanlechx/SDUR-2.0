@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sdur_app/dummy_data/dummy_data.dart';
 import 'package:sdur_app/screens/event_screen/widgets/event_item.dart';
-import 'package:sdur_app/util/sdur_strings.dart';
+import 'package:sdur_app/util/sdur_util/sdur_strings.dart';
 import 'package:sdur_app/views/sdur_scaffold.dart';
 
 class EventScreen extends StatefulWidget {
@@ -23,7 +23,7 @@ class _EventScreenState extends State<EventScreen> {
         ],
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 200,
-          childAspectRatio: 3 / 2,
+          childAspectRatio: 1,
           mainAxisSpacing: 6,
           crossAxisSpacing: 6,
         ),

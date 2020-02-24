@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sdur_app/util/sdur_colors.dart';
+import 'package:sdur_app/util/sdur_util/sdur_colors.dart';
 
 class SdurTheme {
   static getData() => ThemeData(
