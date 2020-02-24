@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sdur_app/dummy_data/dummy_data.dart';
 import 'package:sdur_app/screens/event_screen/widgets/event_item.dart';
+import 'package:sdur_app/util/device_info.dart';
 import 'package:sdur_app/util/sdur_util/sdur_strings.dart';
 import 'package:sdur_app/views/sdur_scaffold.dart';
 
@@ -22,7 +23,7 @@ class _EventScreenState extends State<EventScreen> {
           ...DUMMY_EVENTS.map((event) => EventItem(event)).toList(),
         ],
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 200,
+          maxCrossAxisExtent: DeviceInfo.isSmallDevice(context) ? 400 : 200,
           childAspectRatio: 1,
           mainAxisSpacing: 6,
           crossAxisSpacing: 6,

@@ -1,4 +1,4 @@
-import 'package:sdur_app/models/event_model.dart';
+import 'package:sdur_app/models/event.dart';
 
 // ignore: non_constant_identifier_names
 final DUMMY_EVENTS = [
@@ -15,16 +15,16 @@ final DUMMY_EVENTS = [
   Event(
     name: "Uteritten",
     dateTime: DateTime.utc(2020, 10, 11),
-    targetGroup: TargetGroup.TEENAGERS,
+    targetGroup: TargetGroup.TEENAGERS_AND_ADULTS,
   ),
   Event(
     name: "Dövas Dag",
     dateTime: DateTime.utc(2020, 11, 15),
-    targetGroup: TargetGroup.EVERYONE,
+    targetGroup: TargetGroup.ADULTS,
   ),
   Event(
     name: "Julafton!",
     dateTime: DateTime.utc(2020, 12, 24),
-    targetGroup: TargetGroup.EVERYONE,
+    targetGroup: TargetGroup.TEENAGERS,
   ),
 ];
