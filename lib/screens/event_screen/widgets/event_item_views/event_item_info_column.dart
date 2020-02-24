@@ -28,7 +28,7 @@ class EventItemInfoColumn extends StatelessWidget {
 
   Widget _name(BuildContext ctx) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8),
+      padding: const EdgeInsets.symmetric(vertical: 6),
       child: AutoSizeText(
         name,
         style: Theme.of(ctx).textTheme.title,
