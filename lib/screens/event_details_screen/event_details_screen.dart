@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sdur_app/models/event.dart';
 import 'package:sdur_app/screens/event_screen/widgets/event_item_views/event_item_info_column.dart';
-import 'package:sdur_app/util/sdur_util/sdur_colors.dart';
+import 'package:sdur_app/resource/sdur_colors.dart';
 import 'package:sdur_app/views/sdur_scaffold.dart';
 
 class EventDetailsScreen extends StatelessWidget {

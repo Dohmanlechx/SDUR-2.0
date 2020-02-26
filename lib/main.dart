@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sdur_app/resource//sdur_strings.dart';
+import 'package:sdur_app/resource/sdur_theme.dart';
 import 'package:sdur_app/screens/event_details_screen/event_details_screen.dart';
 import 'package:sdur_app/screens/event_screen/event_screen.dart';
 import 'package:sdur_app/screens/main_screen/main_screen.dart';
-import 'package:sdur_app/util/sdur_util/sdur_strings.dart';
-import 'package:sdur_app/util/sdur_util/sdur_theme.dart';
 
 void main() => runApp(SDURApp());
 

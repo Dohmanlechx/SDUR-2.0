@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sdur_app/dummy_data/dummy_data.dart';
+import 'package:sdur_app/resource/sdur_strings.dart';
 import 'package:sdur_app/screens/event_screen/widgets/event_item.dart';
 import 'package:sdur_app/util/device_info.dart';
-import 'package:sdur_app/util/sdur_util/sdur_strings.dart';
 import 'package:sdur_app/views/sdur_scaffold.dart';
 
 class EventScreen extends StatefulWidget {
@@ -13,6 +13,12 @@ class EventScreen extends StatefulWidget {
 }
 
 class _EventScreenState extends State<EventScreen> {
+  _getSortedEventsByDate() {
+    final events = DUMMY_EVENTS;
+    events.sort((a, b) => a.dateTime.compareTo(b.dateTime));
+    return events.map((event) => EventItem(event)).toList();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SDURScaffold(
@@ -20,7 +26,7 @@ class _EventScreenState extends State<EventScreen> {
       body: GridView(
         padding: const EdgeInsets.all(32),
         children: <Widget>[
-          ...DUMMY_EVENTS.map((event) => EventItem(event)).toList(),
+          ..._getSortedEventsByDate(),
         ],
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: DeviceInfo.isSmallDevice(context) ? 400 : 200,

@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sdur_app/screens/main_screen/widgets/action_item_views/box_decoration.dart';
 import 'package:sdur_app/screens/main_screen/widgets/action_item_views/hollowed_circle.dart';
-import 'package:sdur_app/util/sdur_util/sdur_colors.dart';
+import 'package:sdur_app/resource/sdur_colors.dart';
 
 class ActionItem extends StatelessWidget {
   final String title;
