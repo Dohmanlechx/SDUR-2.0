@@ -23,7 +23,7 @@ class EventDetailsScreen extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.all(16),
                 child: Hero(
-                  tag: "eventItem${event.dateTime}",
+                  tag: "${event.hashCode}",
                   child: Container(
                     width: 200,
                     height: 200,

@@ -17,7 +17,7 @@ class EventItem extends StatelessWidget {
     return GestureDetector(
       onTap: () => _selectEvent(context),
       child: Hero(
-        tag: "eventItem${event.dateTime}",
+        tag: "${event.hashCode}",
         child: Container(
           padding: const EdgeInsets.all(16),
           color: SdurColors.ACCENT,

@@ -13,7 +13,7 @@ class EventScreen extends StatefulWidget {
 }
 
 class _EventScreenState extends State<EventScreen> {
-  _getSortedEventsByDate() {
+  List<EventItem> _sortedEventItemsByDate() {
     final events = DUMMY_EVENTS;
     events.sort((a, b) => a.dateTime.compareTo(b.dateTime));
     return events.map((event) => EventItem(event)).toList();
@@ -26,7 +26,7 @@ class _EventScreenState extends State<EventScreen> {
       body: GridView(
         padding: const EdgeInsets.all(32),
         children: <Widget>[
-          ..._getSortedEventsByDate(),
+          ..._sortedEventItemsByDate(),
         ],
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: DeviceInfo.isSmallDevice(context) ? 400 : 200,
