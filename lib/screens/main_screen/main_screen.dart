@@ -18,8 +18,6 @@ class MainScreen extends StatelessWidget {
 }
 
 class MainScreenGridView extends StatelessWidget {
-  const MainScreenGridView();
-
   @override
   Widget build(BuildContext context) {
     return GridView(
