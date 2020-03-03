@@ -14,7 +14,21 @@ class EventItemInfoColumn extends StatelessWidget {
     this.targetGroup,
   });
 
-  Widget _targetGroup(BuildContext ctx) {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          _targetGroup(context),
+          _dateAndMonth(context),
+          _name(context),
+        ],
+      ),
+    );
+  }
+
+  _targetGroup(BuildContext ctx) {
     return Column(
       children: <Widget>[
         Container(
@@ -28,7 +42,7 @@ class EventItemInfoColumn extends StatelessWidget {
     );
   }
 
-  Widget _dateAndMonth(BuildContext ctx) {
+  _dateAndMonth(BuildContext ctx) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 6),
       child: Text.rich(
@@ -46,27 +60,13 @@ class EventItemInfoColumn extends StatelessWidget {
     );
   }
 
-  Widget _name(BuildContext ctx) {
+  _name(BuildContext ctx) {
     return Expanded(
       child: AutoSizeText(
         name,
         style: Theme.of(ctx).textTheme.title,
         maxLines: 2,
         overflow: TextOverflow.ellipsis,
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          _targetGroup(context),
-          _dateAndMonth(context),
-          _name(context),
-        ],
       ),
     );
   }

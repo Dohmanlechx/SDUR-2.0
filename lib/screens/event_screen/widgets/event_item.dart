@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sdur_app/models/event.dart';
-import 'package:sdur_app/screens/event_details_screen/event_details_screen.dart';
-import 'package:sdur_app/screens/event_screen/widgets/event_item_views/event_item_info_column.dart';
 import 'package:sdur_app/resource/sdur_colors.dart';
+import 'package:sdur_app/screens/event_details_screen/event_details_screen.dart';
+import 'package:sdur_app/screens/event_details_screen/event_details_views/event_item_info_column.dart';
 
 class EventItem extends StatelessWidget {
   final Event event;
