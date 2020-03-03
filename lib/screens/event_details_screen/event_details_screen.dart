@@ -12,7 +12,7 @@ class EventDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final event = ModalRoute.of(context).settings.arguments as Event;
 
-    return SDURScaffold(
+    return SdurScaffold(
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

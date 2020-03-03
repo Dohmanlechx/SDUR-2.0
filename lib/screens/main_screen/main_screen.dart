@@ -9,7 +9,7 @@ import 'package:sdur_app/views/sdur_scaffold.dart';
 class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SDURScaffold(
+    return SdurScaffold(
       appBarTitle: SdurStrings.APP_NAME,
       body: MainScreenGridView(),
       isMainScreen: true,

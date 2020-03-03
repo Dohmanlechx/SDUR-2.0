@@ -24,7 +24,7 @@ class _EventScreenState extends State<EventScreen> {
     final fullWidth = DeviceInfo.width(context);
     final halfWidth = DeviceInfo.width(context) / 2;
 
-    return SDURScaffold(
+    return SdurScaffold(
       appBarTitle: SdurStrings.ACTION_ITEM_EVENTS,
       body: GridView(
         padding: const EdgeInsets.all(32),

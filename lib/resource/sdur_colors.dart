@@ -11,4 +11,7 @@ class SdurColors {
   static const MEMBER_BG = const Color(0xFF7293a0);
   static const PROFILE_BG = const Color(0xFFd3a762);
   static const CONTACT_BG = const Color(0xFFcc7462);
+
+  static const HOMEPAGE_TEAL = const Color(0xFF264f5b);
+  static const HOMEPAGE_GREY = const Color(0xFF353535);
 }
