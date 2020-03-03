@@ -17,7 +17,6 @@ class SDURScaffold extends StatelessWidget {
               iconTheme: IconThemeData(color: SdurColors.BLACK),
               backgroundColor: SdurColors.PRIMARY,
               textTheme: Theme.of(context).textTheme,
-              leading: isMainScreen ? const Icon(Icons.menu, color: SdurColors.BLACK) : null,
               title: Row(
                 children: <Widget>[
                   Expanded(child: Text(appBarTitle, overflow: TextOverflow.fade)),

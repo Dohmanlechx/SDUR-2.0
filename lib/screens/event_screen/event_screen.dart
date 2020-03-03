@@ -21,6 +21,9 @@ class _EventScreenState extends State<EventScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final fullWidth = DeviceInfo.width(context);
+    final halfWidth = DeviceInfo.width(context) / 2;
+
     return SDURScaffold(
       appBarTitle: SdurStrings.ACTION_ITEM_EVENTS,
       body: GridView(
@@ -29,7 +32,7 @@ class _EventScreenState extends State<EventScreen> {
           ..._sortedEventItemsByDate(),
         ],
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: DeviceInfo.isSmallDevice(context) ? 400 : 200,
+          maxCrossAxisExtent: DeviceInfo.isSmallDevice(context) ? fullWidth : halfWidth,
           childAspectRatio: 1,
           mainAxisSpacing: 6,
           crossAxisSpacing: 6,
