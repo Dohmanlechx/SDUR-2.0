@@ -9,7 +9,7 @@ class SdurDrawer extends StatelessWidget {
     return Drawer(
       child: Column(
         children: <Widget>[
-          _header(),
+          _buildHeader(),
           const SizedBox(height: 16),
           _buildListTile(
             ctx: context,
@@ -21,16 +21,16 @@ class SdurDrawer extends StatelessWidget {
             ctx: context,
             title: SdurStrings.BUG_REPORT,
             icon: Icons.bug_report,
-            onPressed: () async => await launch("mailto:florian@sdur.se?subject=SDUR-appen%20buggrapportering"),
+            onPressed: () async => await launch("mailto:sdur@sdur.se?subject=SDUR-appen%20buggrapportering"),
           ),
           const Spacer(),
-          _textDeveloper(),
+          _buildTextDeveloper(),
         ],
       ),
     );
   }
 
-  Widget _header() {
+  Widget _buildHeader() {
     return Container(
       width: double.infinity,
       color: SdurColors.HOMEPAGE_TEAL,
@@ -62,7 +62,7 @@ class SdurDrawer extends StatelessWidget {
     );
   }
 
-  Widget _textDeveloper() {
+  Widget _buildTextDeveloper() {
     return Container(
       padding: const EdgeInsets.all(16),
       width: double.infinity,
