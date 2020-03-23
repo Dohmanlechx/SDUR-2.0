@@ -12,4 +12,11 @@ class SdurStrings {
   /// Drawer
   static const SETTINGS = "Inställningar";
   static const BUG_REPORT = "Rapportera bugg";
+
+  /// SDUR Event Details
+  static const ERROR_DIALOG_TITLE = "Något gick fel!";
+  static const ERROR_DIALOG_MESSAGE = "Det gick inte att öppna eventen i webbläsaren. Vänligen kontakta oss för att anmäla dig!";
+
+  /// General
+  static const WORD_OK = "OK";
 }

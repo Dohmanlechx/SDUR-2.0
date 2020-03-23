@@ -6,6 +6,7 @@ class SdurEvent {
   final String snapshotKey;
   final String title;
   final String description;
+  final String url;
   final DateTime dateTime;
   final TargetGroup targetGroup;
 
@@ -13,6 +14,7 @@ class SdurEvent {
     this.snapshotKey,
     this.title,
     this.description,
+    this.url,
     this.dateTime,
     this.targetGroup,
   });
@@ -21,6 +23,7 @@ class SdurEvent {
       : snapshotKey = snapshot.key,
         title = snapshot.value["title"],
         description = snapshot.value["description"],
+        url = snapshot.value["url"],
         targetGroup = snapshot.value["targetGroup"].toString().fromTextToTargetGroup(),
         dateTime = DateTime.parse(snapshot.value["dateTime"]);
 }
