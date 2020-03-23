@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sdur_app/models/event.dart';
+import 'package:sdur_app/models/sdur_event.dart';
 import 'package:sdur_app/resource/sdur_colors.dart';
 import 'package:sdur_app/screens/event_details_screen/event_details_views/event_item_info_column.dart';
 import 'package:sdur_app/views/sdur_scaffold.dart';
@@ -10,7 +10,7 @@ class EventDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final event = ModalRoute.of(context).settings.arguments as Event;
+    final event = ModalRoute.of(context).settings.arguments as SdurEvent;
 
     return SdurScaffold(
       body: SingleChildScrollView(

@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sdur_app/models/event.dart';
+import 'package:sdur_app/models/sdur_event.dart';
 import 'package:sdur_app/resource/sdur_colors.dart';
 import 'package:sdur_app/screens/event_details_screen/event_details_screen.dart';
 import 'package:sdur_app/screens/event_details_screen/event_details_views/event_item_info_column.dart';
 
-class EventItem extends StatelessWidget {
-  final Event event;
+class SdurEventItem extends StatelessWidget {
+  final SdurEvent event;
 
-  const EventItem(this.event);
+  const SdurEventItem(this.event);
 
   void _selectEvent(BuildContext ctx) => Navigator.of(ctx).pushNamed(EventDetailsScreen.routeName, arguments: event);
 

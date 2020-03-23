@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sdur_app/resource/sdur_colors.dart';
 import 'package:sdur_app/resource/sdur_strings.dart';
-import 'package:sdur_app/screens/event_screen/event_screen.dart';
+import 'package:sdur_app/screens/events_overview_screen/events_overview_screen.dart';
 import 'package:sdur_app/screens/main_screen/widgets/action_item.dart';
 import 'package:sdur_app/util/device_info.dart';
 import 'package:sdur_app/views/sdur_scaffold.dart';
@@ -27,7 +27,7 @@ class MainScreenGridView extends StatelessWidget {
         ActionItem(
           title: SdurStrings.ACTION_ITEM_EVENTS,
           color: SdurColors.EVENT_BG,
-          navigateTo: EventScreen.routeName,
+          navigateTo: EventsOverviewScreen.routeName,
         ),
         ActionItem(
           title: SdurStrings.ACTION_ITEM_MEMBER,

@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:sdur_app/models/event.dart';
+import 'package:sdur_app/models/sdur_event.dart';
 import 'package:sdur_app/util/datetime_helper.dart';
 
 class EventItemInfoColumn extends StatelessWidget {

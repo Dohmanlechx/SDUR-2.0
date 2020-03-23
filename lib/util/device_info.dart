@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class DeviceInfo {
@@ -5,5 +7,5 @@ class DeviceInfo {
 
   static double height(BuildContext ctx) => MediaQuery.of(ctx).size.height;
 
-  static bool isSmallDevice(BuildContext ctx) => (MediaQuery.of(ctx).size.width < 400);
+  static bool isSmallDevice(BuildContext ctx) => (window.physicalSize.width < 720);
 }

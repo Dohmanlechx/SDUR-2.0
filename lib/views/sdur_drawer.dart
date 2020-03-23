@@ -24,7 +24,7 @@ class SdurDrawer extends StatelessWidget {
             icon: Icons.bug_report,
             onPressed: () {},
           ),
-          Spacer(),
+          const Spacer(),
           _textDeveloper(),
         ],
       ),
@@ -69,7 +69,7 @@ class SdurDrawer extends StatelessWidget {
       width: double.infinity,
       child: const Text(
         SdurStrings.APP_DEVELOPER,
-        style: const TextStyle(fontSize: 8),
+        style: const TextStyle(fontSize: 12),
         textAlign: TextAlign.end,
       ),
     );
