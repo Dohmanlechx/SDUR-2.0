@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sdur_app/resource/sdur_colors.dart';
 import 'package:sdur_app/resource/sdur_strings.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SdurDrawer extends StatelessWidget {
-  const SdurDrawer();
-
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -22,7 +21,7 @@ class SdurDrawer extends StatelessWidget {
             ctx: context,
             title: SdurStrings.BUG_REPORT,
             icon: Icons.bug_report,
-            onPressed: () {},
+            onPressed: () async => await launch("mailto:florian@sdur.se?subject=SDUR-appen%20buggrapportering"),
           ),
           const Spacer(),
           _textDeveloper(),
@@ -31,7 +30,7 @@ class SdurDrawer extends StatelessWidget {
     );
   }
 
-  _header() {
+  Widget _header() {
     return Container(
       width: double.infinity,
       color: SdurColors.HOMEPAGE_TEAL,
@@ -43,7 +42,7 @@ class SdurDrawer extends StatelessWidget {
     );
   }
 
-  _buildListTile({
+  Widget _buildListTile({
     BuildContext ctx,
     String title,
     IconData icon,
@@ -63,7 +62,7 @@ class SdurDrawer extends StatelessWidget {
     );
   }
 
-  _textDeveloper() {
+  Widget _textDeveloper() {
     return Container(
       padding: const EdgeInsets.all(16),
       width: double.infinity,
