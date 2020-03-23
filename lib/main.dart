@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:sdur_app/config/sdur_config.dart';
 import 'package:sdur_app/resource//sdur_strings.dart';
 import 'package:sdur_app/resource/sdur_theme.dart';
+import 'package:sdur_app/screens/contact_screen/contact_screen.dart';
 import 'package:sdur_app/screens/event_details_screen/event_details_screen.dart';
 import 'package:sdur_app/screens/events_overview_screen/events_overview_screen.dart';
 import 'package:sdur_app/screens/main_screen/main_screen.dart';
@@ -42,6 +43,8 @@ class SDURApp extends StatelessWidget {
             return CupertinoPageRoute(builder: (_) => EventsOverviewScreen(), settings: settings);
           case EventDetailsScreen.routeName:
             return MaterialPageRoute(builder: (_) => EventDetailsScreen(), settings: settings);
+          case ContactScreen.routeName:
+            return CupertinoPageRoute(builder: (_) => ContactScreen(), settings: settings);
           default:
             return null;
         }

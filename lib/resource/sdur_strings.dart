@@ -1,4 +1,9 @@
 class SdurStrings {
+  /// SDUR
+  static const SDUR_STREET_ADDRESS = "Palmfeltsvägen 13B";
+  static const SDUR_POSTAL_ADDRESS = "121 62 Johanneshov";
+  static const SDUR_EMAIL_ADDRESS = "sdur@sdur.se";
+
   /// App
   static const APP_NAME = "Stockholms Dövas Ungdomsråd";
   static const APP_DEVELOPER = "Utvecklare: David Öhman";

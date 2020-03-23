@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sdur_app/resource/sdur_colors.dart';
 import 'package:sdur_app/resource/sdur_strings.dart';
+import 'package:sdur_app/screens/contact_screen/contact_screen.dart';
 import 'package:sdur_app/screens/events_overview_screen/events_overview_screen.dart';
 import 'package:sdur_app/screens/main_screen/widgets/action_item.dart';
 import 'package:sdur_app/util/device_info.dart';
@@ -42,7 +43,7 @@ class MainScreenGridView extends StatelessWidget {
         ActionItem(
           title: SdurStrings.ACTION_ITEM_CONTACT,
           color: SdurColors.CONTACT_BG,
-          navigateTo: "",
+          navigateTo: ContactScreen.routeName,
         ),
       ],
       gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
