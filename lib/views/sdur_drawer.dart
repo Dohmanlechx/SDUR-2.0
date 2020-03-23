@@ -68,7 +68,7 @@ class SdurDrawer extends StatelessWidget {
       width: double.infinity,
       child: const Text(
         SdurStrings.APP_DEVELOPER,
-        style: const TextStyle(fontSize: 12),
+        style: TextStyle(fontSize: 12),
         textAlign: TextAlign.end,
       ),
     );

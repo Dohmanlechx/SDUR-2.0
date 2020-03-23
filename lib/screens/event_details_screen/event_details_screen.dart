@@ -86,7 +86,7 @@ class EventDetailsScreen extends StatelessWidget {
                 child: CupertinoButton(
                   onPressed: () => _openInWebBrowser(context, sdurEvent.url),
                   color: Colors.blue,
-                  child: Text("ANMÄL MIG!"),
+                  child: const Text("ANMÄL MIG!"),
                 ),
               ),
             )

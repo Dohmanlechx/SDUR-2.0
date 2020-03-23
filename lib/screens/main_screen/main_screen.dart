@@ -45,7 +45,7 @@ class MainScreenGridView extends StatelessWidget {
           navigateTo: "",
         ),
       ],
-      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+      gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
         maxCrossAxisExtent: 200,
         childAspectRatio: 4 / 3,
         mainAxisSpacing: 6,

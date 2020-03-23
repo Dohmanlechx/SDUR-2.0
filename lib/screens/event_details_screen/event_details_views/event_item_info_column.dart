@@ -28,7 +28,7 @@ class EventItemInfoColumn extends StatelessWidget {
     );
   }
 
-  _targetGroup(BuildContext ctx) {
+  Widget _targetGroup(BuildContext ctx) {
     return Column(
       children: <Widget>[
         Container(
@@ -37,12 +37,12 @@ class EventItemInfoColumn extends StatelessWidget {
             style: Theme.of(ctx).textTheme.title.copyWith(fontSize: 22),
           ),
         ),
-        Divider(),
+        const Divider(),
       ],
     );
   }
 
-  _dateAndMonth(BuildContext ctx) {
+  Widget _dateAndMonth(BuildContext ctx) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 6),
       child: Text.rich(
@@ -60,7 +60,7 @@ class EventItemInfoColumn extends StatelessWidget {
     );
   }
 
-  _name(BuildContext ctx) {
+  Widget _name(BuildContext ctx) {
     return Expanded(
       child: AutoSizeText(
         name,

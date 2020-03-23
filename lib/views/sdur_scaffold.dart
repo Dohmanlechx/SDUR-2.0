@@ -19,7 +19,7 @@ class SdurScaffold extends StatelessWidget {
       appBar: appBarTitle != null
           ? AppBar(
               automaticallyImplyLeading: true,
-              iconTheme: IconThemeData(color: SdurColors.BLACK),
+              iconTheme: const IconThemeData(color: SdurColors.BLACK),
               backgroundColor: SdurColors.PRIMARY,
               textTheme: Theme.of(context).textTheme,
               title: Row(
