@@ -24,6 +24,7 @@ Future<void> main() async {
 
 class SDURApp extends StatelessWidget {
   static const routeName = "/";
+
   final FirebaseApp fbApp;
 
   const SDURApp(this.fbApp);

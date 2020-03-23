@@ -13,6 +13,9 @@ class SdurStrings {
   static const SETTINGS = "Inställningar";
   static const BUG_REPORT = "Rapportera bugg";
 
+  /// SDUR Events Overview
+  static const NO_PENDING_EVENTS = "Här var det tomt!\nHåll utkik efter nya events!";
+
   /// SDUR Event Details
   static const ERROR_DIALOG_TITLE = "Något gick fel!";
   static const ERROR_DIALOG_MESSAGE = "Det gick inte att öppna eventen i webbläsaren. Vänligen kontakta oss för att anmäla dig.";
