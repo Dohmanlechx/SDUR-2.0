@@ -41,6 +41,11 @@ class MainScreenGridView extends StatelessWidget {
           onClick: () => _openMembershipHomepage(context),
         ),
         ActionItem(
+          title: SdurStrings.ACTION_ITEM_PROFILE,
+          color: SdurColors.ACCENT,
+          onClick: () {},
+        ),
+        ActionItem(
           title: SdurStrings.ACTION_ITEM_CONTACT,
           color: SdurColors.CONTACT_BG,
           onClick: () => Navigator.of(context).pushNamed(ContactScreen.routeName),
