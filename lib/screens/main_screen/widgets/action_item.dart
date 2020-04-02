@@ -7,15 +7,15 @@ import 'package:sdur_app/screens/main_screen/widgets/action_item_views/hollowed_
 class ActionItem extends StatelessWidget {
   final String title;
   final Color color;
-  final String navigateTo;
+  final Function onClick;
 
   const ActionItem({
     this.title,
     this.color,
-    this.navigateTo,
+    this.onClick,
   });
 
-  void _selectAction(BuildContext ctx) => Navigator.of(ctx).pushNamed(navigateTo);
+  void _selectAction(BuildContext ctx) => onClick();
 
   @override
   Widget build(BuildContext context) {

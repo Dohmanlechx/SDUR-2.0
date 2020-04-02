@@ -6,6 +6,7 @@ import 'package:sdur_app/screens/events_overview_screen/events_overview_screen.d
 import 'package:sdur_app/screens/main_screen/widgets/action_item.dart';
 import 'package:sdur_app/util/device_info.dart';
 import 'package:sdur_app/views/sdur_scaffold.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MainScreen extends StatelessWidget {
   @override
@@ -19,6 +20,10 @@ class MainScreen extends StatelessWidget {
 }
 
 class MainScreenGridView extends StatelessWidget {
+  Future<void> _openMembershipHomepage(BuildContext ctx) async {
+    await launch("https://medlem.sdr.org/");
+  }
+
   @override
   Widget build(BuildContext context) {
     return GridView(
@@ -28,22 +33,17 @@ class MainScreenGridView extends StatelessWidget {
         ActionItem(
           title: SdurStrings.ACTION_ITEM_EVENTS,
           color: SdurColors.EVENT_BG,
-          navigateTo: EventsOverviewScreen.routeName,
+          onClick: () => Navigator.of(context).pushNamed(EventsOverviewScreen.routeName),
         ),
         ActionItem(
           title: SdurStrings.ACTION_ITEM_MEMBER,
           color: SdurColors.MEMBER_BG,
-          navigateTo: "",
-        ),
-        ActionItem(
-          title: SdurStrings.ACTION_ITEM_PROFILE,
-          color: SdurColors.PROFILE_BG,
-          navigateTo: "",
+          onClick: () => _openMembershipHomepage(context),
         ),
         ActionItem(
           title: SdurStrings.ACTION_ITEM_CONTACT,
           color: SdurColors.CONTACT_BG,
-          navigateTo: ContactScreen.routeName,
+          onClick: () => Navigator.of(context).pushNamed(ContactScreen.routeName),
         ),
       ],
       gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
