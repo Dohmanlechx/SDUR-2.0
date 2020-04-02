@@ -1,6 +1,13 @@
 import 'package:firebase_database/firebase_database.dart';
 
-enum TargetGroup { KIDS, TEENAGERS, TEENAGERS_AND_ADULTS, ADULTS, EVERYONE }
+enum TargetGroup {
+  KIDS,
+  TEENAGERS,
+  TEENAGERS_AND_ADULTS,
+  ADULTS,
+  DEAF_PLUS,
+  EVERYONE,
+}
 
 class SdurEvent {
   final String snapshotKey;
@@ -39,6 +46,8 @@ extension ParseTargetGroupToString on TargetGroup {
         return "13-31";
       case TargetGroup.ADULTS:
         return "18-31";
+      case TargetGroup.DEAF_PLUS:
+        return "DÖV+";
       default:
         return "Alla";
     }
@@ -56,6 +65,8 @@ extension ParseStringToTargetGroup on String {
         return TargetGroup.TEENAGERS_AND_ADULTS;
       case "TargetGroup.ADULTS":
         return TargetGroup.ADULTS;
+      case "TargetGroup.DEAF_PLUS":
+        return TargetGroup.DEAF_PLUS;
       default:
         return TargetGroup.EVERYONE;
     }
