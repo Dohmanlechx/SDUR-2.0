@@ -78,7 +78,10 @@ class _EventsOverviewScreenState extends State<EventsOverviewScreen> {
           : GridView(
               padding: const EdgeInsets.all(32),
               children: <Widget>[
-                ..._sdurEvents.map((sdurEvent) => SdurEventItem(sdurEvent)).toList(),
+                ..._sdurEvents
+                    .where((sdurEvent) => sdurEvent.dateTime.isAfter(DateTime.now().subtract(const Duration(days: 1))))
+                    .map((sdurEvent) => SdurEventItem(sdurEvent))
+                    .toList(),
               ],
               gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                 maxCrossAxisExtent: DeviceInfo.isSmallDevice(context) ? fullWidth : halfWidth,
