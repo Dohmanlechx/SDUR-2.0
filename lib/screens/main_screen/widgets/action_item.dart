@@ -44,7 +44,7 @@ class ActionContainer extends StatelessWidget {
             const Spacer(),
             HollowedCircle(color),
             const SizedBox(height: 16),
-            Text(title, style: Theme.of(context).textTheme.body2),
+            Text(title, style: Theme.of(context).textTheme.bodyText2),
             const Spacer(),
           ],
         ),

@@ -60,7 +60,7 @@ class StaffRow extends StatelessWidget {
   }
 
   Widget _buildAutoSizeText(BuildContext ctx, String text, {bool isBold = false}) {
-    final TextStyle _textStyle = Theme.of(ctx).textTheme.body1.copyWith(height: 1.2);
+    final TextStyle _textStyle = Theme.of(ctx).textTheme.bodyText1.copyWith(height: 1.2);
 
     return AutoSizeText(
       text,

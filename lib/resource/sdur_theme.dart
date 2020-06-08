@@ -6,18 +6,18 @@ class SdurTheme {
         primarySwatch: Colors.blue,
         fontFamily: "Helvetica",
         textTheme: ThemeData.light().textTheme.copyWith(
-              title: TextStyle(
+              headline1: TextStyle(
                 fontFamily: "Helvetica",
                 fontSize: 18,
                 fontWeight: FontWeight.normal,
               ),
-              body1: TextStyle(
+              bodyText1: TextStyle(
                 fontFamily: "Helvetica",
                 fontSize: 16,
                 fontWeight: FontWeight.normal,
                 color: SdurColors.BLACK,
               ),
-              body2: TextStyle(
+              bodyText2: TextStyle(
                 fontFamily: "Helvetica",
                 fontSize: 16,
                 fontWeight: FontWeight.bold,

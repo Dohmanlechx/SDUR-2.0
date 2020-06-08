@@ -70,7 +70,7 @@ class _EventsOverviewScreenState extends State<EventsOverviewScreen> {
               ? Center(
                   child: Text(
                     SdurStrings.NO_PENDING_EVENTS,
-                    style: Theme.of(context).textTheme.title.copyWith(fontSize: 24),
+                    style: Theme.of(context).textTheme.headline1.copyWith(fontSize: 24),
                     textAlign: TextAlign.center,
                   ),
                 )

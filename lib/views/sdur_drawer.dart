@@ -57,7 +57,7 @@ class SdurDrawer extends StatelessWidget {
         ),
         child: Icon(icon, color: SdurColors.WHITE, size: 30),
       ),
-      title: Text(title, style: Theme.of(ctx).textTheme.title),
+      title: Text(title, style: Theme.of(ctx).textTheme.headline1),
       onTap: onPressed,
     );
   }

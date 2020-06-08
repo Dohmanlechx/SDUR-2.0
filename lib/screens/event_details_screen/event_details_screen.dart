@@ -80,7 +80,7 @@ class EventDetailsScreen extends StatelessWidget {
       width: double.infinity,
       child: Padding(
         padding: const EdgeInsets.all(16),
-        child: Text(sdurEvent.description, style: Theme.of(ctx).textTheme.body1),
+        child: Text(sdurEvent.description, style: Theme.of(ctx).textTheme.bodyText1),
       ),
     );
   }

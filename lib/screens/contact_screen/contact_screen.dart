@@ -45,7 +45,7 @@ class ContactScreen extends StatelessWidget {
   }
 
   Widget _buildAddress(BuildContext ctx) {
-    final TextStyle _textStyle = Theme.of(ctx).textTheme.title.copyWith(height: 1.3);
+    final TextStyle _textStyle = Theme.of(ctx).textTheme.headline1.copyWith(height: 1.3);
     Widget _buildAutoSizeText(String text) => AutoSizeText(text, style: _textStyle, maxLines: 1);
 
     return Container(

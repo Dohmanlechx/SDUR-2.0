@@ -34,7 +34,7 @@ class EventItemInfoColumn extends StatelessWidget {
         Container(
           child: Text(
             targetGroup.toText(),
-            style: Theme.of(ctx).textTheme.title.copyWith(fontSize: 22),
+            style: Theme.of(ctx).textTheme.headline1.copyWith(fontSize: 22),
           ),
         ),
         const Divider(),
@@ -48,11 +48,11 @@ class EventItemInfoColumn extends StatelessWidget {
       child: Text.rich(
         TextSpan(
           text: dateTime.day.toString(),
-          style: Theme.of(ctx).textTheme.title.copyWith(fontSize: 32, fontWeight: FontWeight.bold),
+          style: Theme.of(ctx).textTheme.headline1.copyWith(fontSize: 32, fontWeight: FontWeight.bold),
           children: <InlineSpan>[
             TextSpan(
               text: " ${DateTimeHelper.getNameOfMonth(dateTime.month)}",
-              style: Theme.of(ctx).textTheme.title.copyWith(fontWeight: FontWeight.bold),
+              style: Theme.of(ctx).textTheme.headline1.copyWith(fontWeight: FontWeight.bold),
             ),
           ],
         ),
@@ -64,7 +64,7 @@ class EventItemInfoColumn extends StatelessWidget {
     return Expanded(
       child: AutoSizeText(
         name,
-        style: Theme.of(ctx).textTheme.title,
+        style: Theme.of(ctx).textTheme.headline1,
         maxLines: 2,
         overflow: TextOverflow.ellipsis,
       ),
