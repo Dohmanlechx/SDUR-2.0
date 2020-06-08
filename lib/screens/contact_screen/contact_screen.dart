@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:maps_launcher/maps_launcher.dart';
 import 'package:sdur_app/resource/sdur_strings.dart';
 import 'package:sdur_app/screens/contact_screen/widgets/staff_row.dart';
 import 'package:sdur_app/views/sdur_scaffold.dart';
@@ -15,7 +16,10 @@ class ContactScreen extends StatelessWidget {
         padding: const EdgeInsets.all(32),
         child: Column(
           children: <Widget>[
-            _buildAddress(context),
+            GestureDetector(
+              onTap: () => MapsLauncher.launchCoordinates(59.293392, 18.075801, 'Välkommen in till SDUR!'),
+              child: _buildAddress(context),
+            ),
             const SizedBox(height: 32),
             const StaffRow(
               imageUrl: 'https://www.sdur.se/wp-content/uploads/2018/10/Florian.jpg',

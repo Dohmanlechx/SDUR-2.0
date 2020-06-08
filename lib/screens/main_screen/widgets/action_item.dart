@@ -15,12 +15,10 @@ class ActionItem extends StatelessWidget {
     this.onClick,
   });
 
-  void _selectAction(BuildContext ctx) => onClick();
-
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => _selectAction(context),
+      onTap: onClick,
       splashColor: SdurColors.BLACK,
       borderRadius: BorderRadius.circular(4),
       child: ActionContainer(title, color),

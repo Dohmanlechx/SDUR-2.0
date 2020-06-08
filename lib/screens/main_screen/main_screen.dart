@@ -43,7 +43,7 @@ class MainScreenGridView extends StatelessWidget {
         ActionItem(
           title: SdurStrings.ACTION_ITEM_PROFILE,
           color: SdurColors.ACCENT,
-          onClick: () {},
+          onClick: null,
         ),
         ActionItem(
           title: SdurStrings.ACTION_ITEM_CONTACT,
