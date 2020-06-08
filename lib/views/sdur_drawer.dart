@@ -21,7 +21,7 @@ class SdurDrawer extends StatelessWidget {
             ctx: context,
             title: SdurStrings.BUG_REPORT,
             icon: Icons.bug_report,
-            onPressed: () async => await launch("mailto:sdur@sdur.se?subject=SDUR-appen%20buggrapportering"),
+            onPressed: () async => await launch('mailto:sdur@sdur.se?subject=SDUR-appen%20buggrapportering'),
           ),
           const Spacer(),
           _buildTextDeveloper(),
@@ -37,7 +37,7 @@ class SdurDrawer extends StatelessWidget {
       height: 120,
       child: SafeArea(
         minimum: const EdgeInsets.only(top: 32, bottom: 8),
-        child: Image.asset("assets/images/sdur_logo.png"),
+        child: Image.asset('assets/images/sdur_logo.png'),
       ),
     );
   }

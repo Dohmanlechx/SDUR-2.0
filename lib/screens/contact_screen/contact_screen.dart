@@ -5,7 +5,7 @@ import 'package:sdur_app/screens/contact_screen/widgets/staff_row.dart';
 import 'package:sdur_app/views/sdur_scaffold.dart';
 
 class ContactScreen extends StatelessWidget {
-  static const routeName = "/contact_screen";
+  static const routeName = '/contact_screen';
 
   @override
   Widget build(BuildContext context) {
@@ -18,25 +18,25 @@ class ContactScreen extends StatelessWidget {
             _buildAddress(context),
             const SizedBox(height: 32),
             const StaffRow(
-              imageUrl: "https://www.sdur.se/wp-content/uploads/2018/10/Florian.jpg",
-              jobTitle: "Ungdomskonsulent",
-              name: "Florian Tirnovan",
-              email: "florian@sdur.se",
-              phone: "0793477827",
+              imageUrl: 'https://www.sdur.se/wp-content/uploads/2018/10/Florian.jpg',
+              jobTitle: 'Ungdomskonsulent',
+              name: 'Florian Tirnovan',
+              email: 'florian@sdur.se',
+              phone: '0793477827',
             ),
             const StaffRow(
-              imageUrl: "https://www.sdur.se/wp-content/uploads/2018/10/michelle.jpg",
-              jobTitle: "Verksamhetsansvarig",
-              name: "Michelle Malchow",
-              email: "michelle@sdur.se",
-              phone: "0703555998",
+              imageUrl: 'https://www.sdur.se/wp-content/uploads/2018/10/michelle.jpg',
+              jobTitle: 'Verksamhetsansvarig',
+              name: 'Michelle Malchow',
+              email: 'michelle@sdur.se',
+              phone: '0703555998',
             ),
             const StaffRow(
-              imageUrl: "https://www.sdur.se/wp-content/uploads/2019/03/jamila1.jpg",
-              jobTitle: "Fritidsföreståndare (DUKiS)",
-              name: "Jamila Ouahid",
-              email: "jamila@dukis.se",
-              phone: "0763230591",
+              imageUrl: 'https://www.sdur.se/wp-content/uploads/2019/03/jamila1.jpg',
+              jobTitle: 'Fritidsföreståndare (DUKiS)',
+              name: 'Jamila Ouahid',
+              email: 'jamila@dukis.se',
+              phone: '0763230591',
             ),
           ],
         ),
@@ -45,7 +45,8 @@ class ContactScreen extends StatelessWidget {
   }
 
   Widget _buildAddress(BuildContext ctx) {
-    final TextStyle _textStyle = Theme.of(ctx).textTheme.headline1.copyWith(height: 1.3);
+    final _textStyle = Theme.of(ctx).textTheme.headline1.copyWith(height: 1.3);
+
     Widget _buildAutoSizeText(String text) => AutoSizeText(text, style: _textStyle, maxLines: 1);
 
     return Container(

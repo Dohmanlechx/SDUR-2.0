@@ -11,8 +11,8 @@ import 'package:sdur_app/screens/main_screen/main_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final FirebaseApp fbApp = await FirebaseApp.configure(
-    name: "sdur_db",
+  final fbApp = await FirebaseApp.configure(
+    name: 'sdur_db',
     options: const FirebaseOptions(
       googleAppID: FirebaseConfig.GOOGLE_APP_ID,
       apiKey: FirebaseConfig.API_KEY,
@@ -24,7 +24,7 @@ Future<void> main() async {
 }
 
 class SDURApp extends StatelessWidget {
-  static const routeName = "/";
+  static const routeName = '/';
 
   final FirebaseApp fbApp;
 

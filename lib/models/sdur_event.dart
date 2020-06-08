@@ -28,44 +28,44 @@ class SdurEvent {
 
   SdurEvent.fromSnapshot(DataSnapshot snapshot)
       : snapshotKey = snapshot.key,
-        title = snapshot.value["title"],
-        description = snapshot.value["description"],
-        url = snapshot.value["url"],
-        targetGroup = snapshot.value["targetGroup"].toString().fromTextToTargetGroup(),
-        dateTime = DateTime.parse(snapshot.value["dateTime"]);
+        title = snapshot.value['title'],
+        description = snapshot.value['description'],
+        url = snapshot.value['url'],
+        targetGroup = snapshot.value['targetGroup'].toString().fromTextToTargetGroup(),
+        dateTime = DateTime.parse(snapshot.value['dateTime']);
 }
 
 extension ParseTargetGroupToString on TargetGroup {
-  toText() {
+  String toText() {
     switch (this) {
       case TargetGroup.KIDS:
-        return "KiDS";
+        return 'KiDS';
       case TargetGroup.TEENAGERS:
-        return "13-17";
+        return '13-17';
       case TargetGroup.TEENAGERS_AND_ADULTS:
-        return "13-31";
+        return '13-31';
       case TargetGroup.ADULTS:
-        return "18-31";
+        return '18-31';
       case TargetGroup.DEAF_PLUS:
-        return "DÖV+";
+        return 'DÖV+';
       default:
-        return "Alla";
+        return 'Alla';
     }
   }
 }
 
 extension ParseStringToTargetGroup on String {
-  fromTextToTargetGroup() {
+  TargetGroup fromTextToTargetGroup() {
     switch (this) {
-      case "TargetGroup.KIDS":
+      case 'TargetGroup.KIDS':
         return TargetGroup.KIDS;
-      case "TargetGroup.TEENAGERS":
+      case 'TargetGroup.TEENAGERS':
         return TargetGroup.TEENAGERS;
-      case "TargetGroup.TEENAGERS_AND_ADULTS":
+      case 'TargetGroup.TEENAGERS_AND_ADULTS':
         return TargetGroup.TEENAGERS_AND_ADULTS;
-      case "TargetGroup.ADULTS":
+      case 'TargetGroup.ADULTS':
         return TargetGroup.ADULTS;
-      case "TargetGroup.DEAF_PLUS":
+      case 'TargetGroup.DEAF_PLUS':
         return TargetGroup.DEAF_PLUS;
       default:
         return TargetGroup.EVERYONE;

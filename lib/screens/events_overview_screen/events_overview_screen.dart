@@ -8,15 +8,15 @@ import 'package:sdur_app/views/loading_screen.dart';
 import 'package:sdur_app/views/sdur_scaffold.dart';
 
 class EventsOverviewScreen extends StatefulWidget {
-  static const routeName = "/event_screen";
+  static const routeName = '/event_screen';
 
   @override
   State<StatefulWidget> createState() => _EventsOverviewScreenState();
 }
 
 class _EventsOverviewScreenState extends State<EventsOverviewScreen> {
-  DatabaseReference _eventsRef = FirebaseDatabase.instance.reference();
-  List<SdurEvent> _sdurEvents = [];
+  final DatabaseReference _eventsRef = FirebaseDatabase.instance.reference();
+  final List<SdurEvent> _sdurEvents = [];
   bool _isFirebaseDataEmpty = false;
 
   @override
@@ -40,7 +40,7 @@ class _EventsOverviewScreenState extends State<EventsOverviewScreen> {
   }
 
   void _onEntryChanged(Event firebaseEvent) {
-    final SdurEvent oldSdurEvent = _sdurEvents.singleWhere((entry) => entry.snapshotKey == firebaseEvent.snapshot.key);
+    final oldSdurEvent = _sdurEvents.singleWhere((entry) => entry.snapshotKey == firebaseEvent.snapshot.key);
     setState(() {
       _sdurEvents[_sdurEvents.indexOf(oldSdurEvent)] = SdurEvent.fromSnapshot(firebaseEvent.snapshot);
       _sortEventsByDate();

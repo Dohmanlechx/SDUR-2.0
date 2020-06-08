@@ -16,17 +16,17 @@ void main() {
     final nov = DateTimeHelper.getNameOfMonth(11);
     final dec = DateTimeHelper.getNameOfMonth(12);
 
-    expect(jan, "jan");
-    expect(feb, "feb");
-    expect(mar, "mars");
-    expect(apr, "apr");
-    expect(may, "maj");
-    expect(jun, "juni");
-    expect(jul, "juli");
-    expect(aug, "aug");
-    expect(sep, "sept");
-    expect(oct, "okt");
-    expect(nov, "nov");
-    expect(dec, "dec");
+    expect(jan, 'jan');
+    expect(feb, 'feb');
+    expect(mar, 'mars');
+    expect(apr, 'apr');
+    expect(may, 'maj');
+    expect(jun, 'juni');
+    expect(jul, 'juli');
+    expect(aug, 'aug');
+    expect(sep, 'sept');
+    expect(oct, 'okt');
+    expect(nov, 'nov');
+    expect(dec, 'dec');
   });
 }

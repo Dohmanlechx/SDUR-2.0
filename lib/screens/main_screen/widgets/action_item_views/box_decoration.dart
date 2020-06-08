@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ActionItemBoxDecoration {
-  static getBoxDecoration(Color color) => BoxDecoration(
+  static BoxDecoration getBoxDecoration(Color color) => BoxDecoration(
         gradient: LinearGradient(
           colors: [
             color.withOpacity(0.9),

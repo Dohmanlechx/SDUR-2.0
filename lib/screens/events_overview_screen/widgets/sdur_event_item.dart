@@ -17,7 +17,7 @@ class SdurEventItem extends StatelessWidget {
     return GestureDetector(
       onTap: () => _selectEvent(context),
       child: Hero(
-        tag: "${event.hashCode}",
+        tag: '${event.hashCode}',
         child: Container(
           padding: const EdgeInsets.all(16),
           color: SdurColors.ACCENT,

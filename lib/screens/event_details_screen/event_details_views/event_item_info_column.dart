@@ -51,7 +51,7 @@ class EventItemInfoColumn extends StatelessWidget {
           style: Theme.of(ctx).textTheme.headline1.copyWith(fontSize: 32, fontWeight: FontWeight.bold),
           children: <InlineSpan>[
             TextSpan(
-              text: " ${DateTimeHelper.getNameOfMonth(dateTime.month)}",
+              text: ' ${DateTimeHelper.getNameOfMonth(dateTime.month)}',
               style: Theme.of(ctx).textTheme.headline1.copyWith(fontWeight: FontWeight.bold),
             ),
           ],

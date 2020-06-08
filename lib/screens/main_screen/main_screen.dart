@@ -21,7 +21,7 @@ class MainScreen extends StatelessWidget {
 
 class MainScreenGridView extends StatelessWidget {
   Future<void> _openMembershipHomepage(BuildContext ctx) async {
-    await launch("https://medlem.sdr.org/");
+    await launch('https://medlem.sdr.org/');
   }
 
   @override

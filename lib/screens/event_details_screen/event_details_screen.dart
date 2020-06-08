@@ -9,7 +9,7 @@ import 'package:sdur_app/views/sdur_scaffold.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class EventDetailsScreen extends StatelessWidget {
-  static const routeName = "/event_details_screen";
+  static const routeName = '/event_details_screen';
 
   Future<void> _openInWebBrowser(BuildContext ctx, String url) async {
     await canLaunch(url) ? await launch(url) : _showErrorDialog(ctx);
@@ -31,7 +31,7 @@ class EventDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final SdurEvent sdurEvent = ModalRoute.of(context).settings.arguments as SdurEvent;
+    final sdurEvent = ModalRoute.of(context).settings.arguments as SdurEvent;
 
     return SdurScaffold(
       body: SingleChildScrollView(
@@ -56,7 +56,7 @@ class EventDetailsScreen extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(16),
         child: Hero(
-          tag: "${sdurEvent.hashCode}",
+          tag: '${sdurEvent.hashCode}',
           child: Container(
             width: 200,
             height: 200,
@@ -93,7 +93,7 @@ class EventDetailsScreen extends StatelessWidget {
         child: CupertinoButton(
           onPressed: () => _openInWebBrowser(ctx, sdurEvent.url),
           color: Colors.blue,
-          child: const Text("ANMÄL MIG!"),
+          child: const Text('ANMÄL MIG!'),
         ),
       ),
     );

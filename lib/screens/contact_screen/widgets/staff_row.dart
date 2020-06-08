@@ -24,7 +24,7 @@ class StaffRow extends StatelessWidget {
     return Column(
       children: <Widget>[
         GestureDetector(
-          onTap: () async => await launch("mailto:$email"),
+          onTap: () async => await launch('mailto:$email'),
           child: Row(
             children: <Widget>[
               ClipRRect(
@@ -60,7 +60,7 @@ class StaffRow extends StatelessWidget {
   }
 
   Widget _buildAutoSizeText(BuildContext ctx, String text, {bool isBold = false}) {
-    final TextStyle _textStyle = Theme.of(ctx).textTheme.bodyText1.copyWith(height: 1.2);
+    final _textStyle = Theme.of(ctx).textTheme.bodyText1.copyWith(height: 1.2);
 
     return AutoSizeText(
       text,
