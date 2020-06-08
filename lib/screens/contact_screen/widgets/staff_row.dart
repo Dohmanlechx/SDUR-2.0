@@ -41,7 +41,7 @@ class StaffRow extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(left: 16, top: 16, bottom: 16),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       _buildAutoSizeText(context, jobTitle, isBold: true),
                       _buildAutoSizeText(context, name),
