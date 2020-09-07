@@ -23,7 +23,8 @@ class SdurStrings {
 
   /// SDUR Event Details
   static const ERROR_DIALOG_TITLE = 'Något gick fel!';
-  static const ERROR_DIALOG_MESSAGE = 'Det gick inte att öppna eventen i webbläsaren. Vänligen kontakta oss för att anmäla dig.';
+  static const ERROR_DIALOG_MESSAGE =
+      'Det gick inte att öppna eventen i webbläsaren. Vänligen kontakta oss för att anmäla dig.';
   static const BUTTON_TEXT = 'Gå till hemsidan';
 
   /// General

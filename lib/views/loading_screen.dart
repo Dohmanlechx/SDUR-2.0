@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sdur_app/resource/sdur_colors.dart';
 
 class LoadingScreen extends StatelessWidget {
   const LoadingScreen();

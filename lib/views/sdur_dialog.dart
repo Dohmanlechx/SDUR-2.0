@@ -19,7 +19,10 @@ class SdurDialog extends StatelessWidget {
     return AlertDialog(
       title: Text(
         title,
-        style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 20, color: SdurColors.BLACK,),
+        style: Theme.of(context).textTheme.bodyText2.copyWith(
+              fontSize: 20,
+              color: SdurColors.BLACK,
+            ),
       ),
       content: Text(
         message,
