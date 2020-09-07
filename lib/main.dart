@@ -11,12 +11,15 @@ import 'package:sdur_app/screens/main_screen/main_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final fbApp = await FirebaseApp.configure(
+
+  final fbApp = await Firebase.initializeApp(
     name: 'sdur_db',
     options: const FirebaseOptions(
-      googleAppID: FirebaseConfig.GOOGLE_APP_ID,
+      appId: FirebaseConfig.GOOGLE_APP_ID,
       apiKey: FirebaseConfig.API_KEY,
       databaseURL: FirebaseConfig.DATABASE_URL,
+      projectId: 'sdur-3467d',
+      messagingSenderId: '854332587940',
     ),
   );
 
