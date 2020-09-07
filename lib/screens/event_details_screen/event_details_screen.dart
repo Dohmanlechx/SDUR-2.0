@@ -62,7 +62,7 @@ class EventDetailsScreen extends StatelessWidget {
             height: 200,
             margin: const EdgeInsets.only(top: 32),
             padding: const EdgeInsets.all(16),
-            color: SdurColors.ACCENT,
+            color: Theme.of(ctx).accentColor,
             child: EventItemInfoColumn(
               dateTime: sdurEvent.dateTime,
               name: sdurEvent.title,
@@ -76,7 +76,7 @@ class EventDetailsScreen extends StatelessWidget {
 
   Widget _buildDescription(BuildContext ctx, SdurEvent sdurEvent) {
     return Container(
-      color: SdurColors.ACCENT,
+      color: Theme.of(ctx).accentColor,
       width: double.infinity,
       child: Padding(
         padding: const EdgeInsets.all(16),
@@ -90,10 +90,11 @@ class EventDetailsScreen extends StatelessWidget {
       width: double.infinity,
       child: Padding(
         padding: const EdgeInsets.all(16),
-        child: CupertinoButton(
+        child: RaisedButton(
           onPressed: () => _openInWebBrowser(ctx, sdurEvent.url),
-          color: Colors.blue,
-          child: const Text('ANMÄL MIG!'),
+          color: Theme.of(ctx).primaryColor,
+          textColor: SdurColors.WHITE,
+          child: Text(SdurStrings.BUTTON_TEXT.toUpperCase()),
         ),
       ),
     );

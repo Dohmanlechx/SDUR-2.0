@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sdur_app/models/sdur_event.dart';
-import 'package:sdur_app/resource/sdur_colors.dart';
 import 'package:sdur_app/screens/event_details_screen/event_details_screen.dart';
 import 'package:sdur_app/screens/event_details_screen/event_details_views/event_item_info_column.dart';
 
@@ -20,7 +19,7 @@ class SdurEventItem extends StatelessWidget {
         tag: '${event.hashCode}',
         child: Container(
           padding: const EdgeInsets.all(16),
-          color: SdurColors.ACCENT,
+          color: Theme.of(context).accentColor,
           child: EventItemInfoColumn(
             dateTime: event.dateTime,
             name: event.title,

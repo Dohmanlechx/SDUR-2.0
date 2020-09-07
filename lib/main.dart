@@ -43,11 +43,20 @@ class SDURApp extends StatelessWidget {
       onGenerateRoute: (RouteSettings settings) {
         switch (settings.name) {
           case EventsOverviewScreen.routeName:
-            return CupertinoPageRoute(builder: (_) => EventsOverviewScreen(), settings: settings);
+            return CupertinoPageRoute(
+              builder: (_) => EventsOverviewScreen(),
+              settings: settings,
+            );
           case EventDetailsScreen.routeName:
-            return MaterialPageRoute(builder: (_) => EventDetailsScreen(), settings: settings);
+            return MaterialPageRoute(
+              builder: (_) => EventDetailsScreen(),
+              settings: settings,
+            );
           case ContactScreen.routeName:
-            return CupertinoPageRoute(builder: (_) => ContactScreen(), settings: settings);
+            return CupertinoPageRoute(
+              builder: (_) => ContactScreen(),
+              settings: settings,
+            );
           default:
             return null;
         }

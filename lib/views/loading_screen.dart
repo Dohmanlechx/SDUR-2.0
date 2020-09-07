@@ -9,9 +9,9 @@ class LoadingScreen extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: double.infinity,
-      child: const Center(
+      child: Center(
         child: CircularProgressIndicator(
-          valueColor: AlwaysStoppedAnimation<Color>(SdurColors.ACCENT),
+          valueColor: AlwaysStoppedAnimation<Color>(Theme.of(context).accentColor),
         ),
       ),
     );
